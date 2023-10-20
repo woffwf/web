@@ -1,0 +1,111 @@
+/* Стилі для body */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0b8d1; /* Пастельний рожевий */
+}
+
+
+
+/* Стилі для заголовка h1 */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+    color: #333; /* Темно-сірий */
+}
+
+/* Стилі для контейнера .header */
+.header {
+    background-color: #f0b8d1; /* Пастельний рожевий */
+    color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Стилі для кнопок сортування та пошуку */
+#sort-by-price,
+#sort-by-brand,
+#search-input,
+#search-button,
+#cancel-search-button {
+    padding: 8px 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#sort-by-price,
+#sort-by-brand {
+    background-color: #5d9cec; /* Пастельний блакитний */
+    color: #fff;
+}
+
+#search-input {
+    flex: 1;
+}
+
+#search-button {
+    background-color: #5eb95e; /* Пастельний зелений */
+    color: #fff;
+}
+
+#cancel-search-button {
+    background-color: #d9534f; /* Пастельний червоний */
+    color: #fff;
+}
+
+/* Стилі для контейнера #beverage-list */
+#beverage-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Вирівнювання по центру по горизонталі */
+    align-items: flex-start; /* Початкове вирівнювання по вертикалі */
+    margin: 20px 0;
+}
+
+/* Стилі для елементів безалкогольних напоїв .beverage-item */
+.beverage-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.beverage-item img {
+    width: 90px;
+    height: 250px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.beverage-item p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Стилі для загальної ціни */
+#total-price {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #5eb95e; /* Пастельний зелений */
+}
+
+#total-amount {
+    color: #28A745;
+    font-size: 24px;
+}

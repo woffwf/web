@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+    <title>Напої без алкоголю</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <h1 class="first">Магазин безалкогольних напоїв</h1>
+
+    <div class="header">
+        <button id="sort-by-price">Сортувати за ціною</button>
+        <button id="sort-by-brand">Сортувати за брендом</button>
+
+        <input type="text" id="search-input" placeholder="Пошук за брендом або моделлю">
+        <button id="search-button">Пошук</button>
+        <button id="cancel-search-button">Скасувати пошук</button>
+    </div>
+
+    <div id="beverage-list"></div>
+
+    <p id="total-price">Загальна ціна: ₴<span id="total-amount">0</span></p>
+
+    <script>
+        class Beverage {
+            constructor(brand, name, price, volume, description, image) {
+                this.brand = brand;
+                this.name = name;
+                this.price = price;
+                this.volume = volume;
+                this.description = description;
+                this.image = image;
+            }
+        }
+
+        
+        const beveragesData = [
+          new Beverage('Coca Cola', 'Blackcurrant Royale', 39, '0.5л', 'Non-alcoholic beverage with blackcurrant flavor', './img/кола.png'),
+         new Beverage('Живчик', 'Garden Spritz', 30, '0.5л', 'Refreshing non-alcoholic spritz', './img/живчик.png'),
+         new Beverage('Спрайт', 'Tale of Forest', 32, '0.5л', 'Non-alcoholic beverage Tale of Forest', './img/спрайт.png'),
+          new Beverage('Доктор пепер', 'Blueberry Juniper', 49, '0.5л', 'Non-alcoholic beverage with hazelnut flavor', './img/доктор пепер.png')
+        ];
+
+
+        let filteredBeverages = beveragesData;
+
+        function renderBeverages(beverages) {
+            const beverageList = document.getElementById('beverage-list');
+            beverageList.innerHTML = '';
+
+            beverages.forEach(beverage => {
+                const beverageItem = document.createElement('div');
+                beverageItem.classList.add('beverage-item');
+                beverageItem.innerHTML = `
+                    <img src="${beverage.image}" alt="${beverage.brand} ${beverage.name}" width="200">
+                    <p>Бренд: ${beverage.brand}</p>
+                    <p>Назва: ${beverage.name}</p>
+                    <p>Ціна: ${beverage.price}₴</p>
+                    <p>Об'єм: ${beverage.volume}</p>
+                    <p>Опис: ${beverage.description}</p>
+                `;
+                beverageList.appendChild(beverageItem);
+            });
+            filteredBeverages = beverages;
+        }
+
+        renderBeverages(filteredBeverages);
+
+        const cancelSearchButton = document.getElementById("cancel-search-button");
+
+        cancelSearchButton.addEventListener("click", () => {
+            document.getElementById('search-input').value = "";
+            filteredBeverages = beveragesData;
+            renderBeverages(filteredBeverages); 
+            calculateTotalPrice();
+        });
+
+        document.getElementById('sort-by-price').addEventListener('click', () => {
+            const sortedBeverages = [...filteredBeverages].sort((a, b) => a.price - b.price);
+            renderBeverages(sortedBeverages);
+        });
+
+        document.getElementById('sort-by-brand').addEventListener('click', () => {
+            const sortedBeverages = [...filteredBeverages].sort((a, b) => a.brand.localeCompare(b.brand));
+            renderBeverages(sortedBeverages);
+        });
+
+        document.getElementById('search-button').addEventListener('click', () => {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const filteredBeveragesList = filteredBeverages.filter(beverage =>
+                beverage.brand.toLowerCase().includes(searchTerm) ||
+                beverage.name.toLowerCase().includes(searchTerm)
+            );
+            renderBeverages(filteredBeveragesList);
+            calculateTotalPrice();
+        });
+
+        function calculateTotalPrice() {
+            const totalAmount = filteredBeverages.reduce((total, beverage) => total + beverage.price, 0);
+            document.getElementById('total-amount').textContent = totalAmount;
+        }
+
+        calculateTotalPrice();
+    </script>
+</body>
+</html>
