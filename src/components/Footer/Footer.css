@@ -1,0 +1,24 @@
+/* Footer.css */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; /* Автоматично розташовує футер внизу контейнера */
+  }
+  
+  .footer a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  /* Стилі для основного контейнера вмісту */
+.content-container {
+    min-height: 100vh; /* Висота віртуального вікна */
+    display: flex;
+    flex-direction: column;
+  }
+  
