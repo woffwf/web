@@ -1,0 +1,45 @@
+/* Header.css */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between; /* розташування елементів по обидва боки */
+  align-items: center; /* вирівнювання елементів по вертикалі */
+}
+
+.navigation {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  align-items: center; /* для вирівнювання по вертикалі */
+}
+
+.navigation li {
+  margin: 0 10px;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+}
+
+.cart-icon {
+  position: relative; /* для позиціонування індексу товарів */
+}
+
+.cart-icon-img {
+  width: 50px;
+  height: auto;
+}
+
+.cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-size: 0.8em;
+}
