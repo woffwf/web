@@ -1,0 +1,7 @@
+.card-container {
+    display: flex;
+    justify-content: center; /* Вирівнює карточки по горизонталі */
+    align-items: center; /* Вирівнює карточки по вертикалі */
+    flex-wrap: wrap; /* Дозволяє карточкам обгортатися на новий рядок */
+    gap: 10px; /* Додає відступи між карточками */
+  }
