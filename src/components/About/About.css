@@ -1,0 +1,28 @@
+.about-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .about-hero {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .about-story, .about-mission, .about-values, .about-team, .about-contact {
+    margin-top: 20px;
+  }
+  
+  .about-story h2, .about-mission h2, .about-values h2, .about-team h2, .about-contact h2 {
+    color: #007bff;
+  }
+  
+  .about-values ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about-values li {
+    margin-bottom: 10px;
+  }
+  

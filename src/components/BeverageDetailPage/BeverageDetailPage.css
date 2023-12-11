@@ -1,0 +1,62 @@
+/* BeverageDetailPage.css */
+
+.beverage-detail-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+  }
+  
+  .beverage-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .beverage-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .beverage-image {
+    max-width: 200px;
+    border-radius: 10px;
+  }
+  
+  .beverage-info {
+    flex-grow: 1;
+    padding-left: 20px;
+  }
+  
+  .beverage-brand,
+  .beverage-price,
+  .beverage-volume {
+    margin-bottom: 10px;
+  }
+  
+  .beverage-description {
+    margin-top: 20px;
+    font-style: italic;
+  }
+  
+  .back-button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 20px;
+  }
+  
