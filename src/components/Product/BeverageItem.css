@@ -1,0 +1,23 @@
+/* BeverageItem.css */
+.beverage-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.beverage-item img {
+    width: 90px;
+    height: 250px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.beverage-item p {
+    margin: 5px 0;
+    font-size: 16px;
+}

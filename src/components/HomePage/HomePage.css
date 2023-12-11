@@ -1,0 +1,31 @@
+.home-page .hero-section {
+    text-align: center;
+    padding: 20px;
+  }
+.logo{
+  width: 30%;
+}
+  .home-page .hero-section img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .featured-products {
+    padding: 20px;
+    background-color: #f2f2f2;
+  }
+  
+  
+  .featured-description {
+    margin: 10px 0;
+    color: #555; 
+    font-size: 16px; 
+  }
+  
+  .about-us {
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  /* Інші стилі за потребою */
+  

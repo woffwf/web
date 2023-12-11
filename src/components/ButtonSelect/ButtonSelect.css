@@ -1,0 +1,16 @@
+/* ButtonSelect.css */
+.button-select {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #007bff; /* кольор фону */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+  }
+  
+  .button-select:hover {
+    background-color: #0056b3; /* Колір фону при наведенні */
+  }
+  
