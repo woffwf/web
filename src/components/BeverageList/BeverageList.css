@@ -1,0 +1,47 @@
+/* CSS файл, наприклад, App.css або CardList.css */
+.card-container {
+  display: flex;
+  justify-content: center; /* Вирівнює карточки по горизонталі */
+  align-items: center; /* Вирівнює карточки по вертикалі */
+  flex-wrap: wrap; /* Дозволяє карточкам обгортатися на новий рядок */
+  gap: 10px; /* Додає відступи між карточками */
+}
+
+/* BeverageList.css */
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-container input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 2px solid #ddd; /* Світлий сірий контур */
+  border-radius: 5px; /* Закруглені кути */
+  font-size: 16px; /* Зручний розмір шрифту */
+  outline: none; /* Видаляємо контур при фокусі */
+  transition: border-color 0.3s; /* Плавна анімація для контуру */
+}
+
+.search-container input:focus {
+  border-color: #007bff; /* Зміна кольору контуру при фокусі */
+}
+
+.search-container input::placeholder {
+  color: #aaa; /* Світлий колір тексту плейсхолдера */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Відступи між карточками */
+}
+
+/* Стилі для карточок напоїв (BeverageItem) */
+.beverage-item {
+  /* ваші існуючі стилі для карточок */
+}
