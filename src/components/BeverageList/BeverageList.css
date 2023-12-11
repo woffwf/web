@@ -1,0 +1,82 @@
+/* BeverageList.css */
+
+.search-container {
+  display: flex;
+  flex-direction: column; /* Стовпчик для кращого відображення фільтрів */
+  align-items: center;
+  margin: 20px 0;
+}
+
+.search-container input,
+.search-container .price-filter {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 10px; /* Відступ між елементами */
+}
+
+.search-container input {
+  border: 2px solid #ddd; /* Світлий сірий контур */
+  border-radius: 5px; /* Закруглені кути */
+  font-size: 16px; /* Зручний розмір шрифту */
+  outline: none; /* Видаляємо контур при фокусі */
+  transition: border-color 0.3s; /* Плавна анімація для контуру */
+}
+
+.search-container input:focus {
+  border-color: #007bff; /* Зміна кольору контуру при фокусі */
+}
+
+.search-container input::placeholder {
+  color: #aaa; /* Світлий колір тексту плейсхолдера */
+}
+
+/* Стилі для елементів фільтрації ціни */
+.price-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Вирівнювання по центру */
+  gap: 10px; /* Відступ між елементами */
+}
+
+.price-filter input {
+  width: calc(50% - 15px); /* Врахування відступу */
+  text-align: center;
+  border: 2px solid #ddd; /* Світлий сірий контур */
+  border-radius: 5px; /* Закруглені кути */
+  font-size: 16px; /* Зручний розмір шрифту */
+}
+
+.price-label {
+  margin-right: 5px; /* Відступ справа від надпису */
+}
+/* App.css або CardList.css */
+
+.card-container {
+  display: flex;
+  justify-content: center; /* Вирівнює карточки по горизонталі */
+  align-items: flex-start; /* Вирівнює карточки по верхньому краю */
+  flex-wrap: wrap; /* Дозволяє карточкам обгортатися на новий рядок */
+  gap: 20px; /* Відступи між карточками */
+}
+
+/* BeverageItem.css */
+
+.beverage-item {
+  border: 1px solid #ddd; /* Світлий сірий контур */
+  border-radius: 5px; /* Закруглені кути */
+  padding: 10px;
+  width: 200px; /* Фіксована ширина карточки */
+  text-align: center;
+}
+
+.beverage-item img {
+  width: 100%; /* Зображення займає всю ширину карточки */
+  border-radius: 5px; /* Закруглені кути для зображення */
+}
+
+.beverage-item p {
+  margin: 5px 0;
+}
+
+/* Приклад стилізації для кнопок або інших елементів може бути доданий за потреби */
