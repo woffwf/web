@@ -1,0 +1,32 @@
+/* Carousel.css */
+  .carousel-item {
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  /* Carousel.css */
+.carousel-container {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+.carousel-controls {
+  margin-top: 10px; /* Відступ між зображенням і кнопками */
+  text-align: center; /* Центрування кнопок */
+}
+
+.carousel-controls button {
+  margin: 0 5px; /* Відступи між кнопками */
+}
